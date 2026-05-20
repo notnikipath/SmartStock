@@ -30,7 +30,7 @@
 ## Структура проекта
 
 ```text
-6_task_smartstock/
+smartstock/
 ├── api-gateway/
 ├── inventory-service/
 ├── forecast-service/
