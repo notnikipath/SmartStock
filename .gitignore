@@ -12,3 +12,5 @@ coverage/
 htmlcov/
 *.log
 data/dataset/*.tmp
+.env
+.ruff_cache/

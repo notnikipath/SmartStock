@@ -128,3 +128,11 @@ pytest -q
   3. расчёт рекомендаций закупки,
   4. уведомление менеджера,
   5. аудит/логирование операции.
+
+## Environment configuration
+
+Before starting services, copy `.env.example` to `.env` and adjust it for your machine. Example passwords and keys are for local demonstration only.
+
+```powershell
+Copy-Item .env.example .env
+```

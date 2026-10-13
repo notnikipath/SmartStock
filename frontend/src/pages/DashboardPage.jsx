@@ -1,6 +1,10 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import * as echarts from "echarts";
+import * as echarts from "echarts/core";
+import { LineChart } from "echarts/charts";
+import { GridComponent, TooltipComponent, AriaComponent } from "echarts/components";
+import { CanvasRenderer } from "echarts/renderers";
+echarts.use([LineChart, GridComponent, TooltipComponent, AriaComponent, CanvasRenderer]);
 import { fetchHealth, setLanguage, setRole } from "../store/dashboardSlice";
 import { KpiCard } from "../components/KpiCard";
 
@@ -48,6 +52,7 @@ export function DashboardPage() {
     const chart = echarts.init(chartRef.current);
     chart.setOption({
       backgroundColor: "transparent",
+      aria: { enabled: true },
       tooltip: { trigger: "axis" },
       xAxis: {
         type: "category",
